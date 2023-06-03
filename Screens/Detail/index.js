@@ -1,10 +1,18 @@
 import { View, Text, Image, ScrollView, SafeAreaView } from 'react-native'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react'
 import styles from './style'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const Detail = ({ route }) => {
+    const love = async () => {
 
+
+
+        const value = await AsyncStorage.getItem('LoignInfor')
+        console.log(value);
+
+    }
     return (
         <SafeAreaView>
             <ScrollView style={styles.container} >
@@ -27,13 +35,22 @@ const Detail = ({ route }) => {
                             <Image source={require('../../images/calories.png')} style={styles.level} />
                             <Text>600kcl</Text>
                         </View>
+                        <View style={styles.min} >
+                            <TouchableOpacity onPress={love}>
+                                <Image source={require('../../images/love.png')} style={styles.level} />
+                                <Text>thích</Text>
+                            </TouchableOpacity>
+
+                        </View>
                     </View>
 
 
                 </View>
 
                 <View style={styles.containerAbout}>
+
                     <Text style={styles.about}>about recipe</Text>
+
                     <Text style={styles.text}>
                         {route.params.ingredients}
                     </Text>
@@ -44,6 +61,7 @@ const Detail = ({ route }) => {
                         {route.params.instructions}
                     </Text>
                 </View>
+
             </ScrollView>
 
         </SafeAreaView>

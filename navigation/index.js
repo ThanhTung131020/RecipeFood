@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeStackScreen from './homeNavigation'
 import LoginStackScreen from './loginNavigation'
 import LoveStackScreen from './loveNavigation'
-
+import Detailuser from './detailUser'
 const Tab = createBottomTabNavigator();
 const Mytabs = () => {
     return (
@@ -27,6 +27,11 @@ const Mytabs = () => {
                             iconName = focused
                                 ? 'person'
                                 : 'person-outline';
+                            break;
+                        case 'Detailuser':
+                            iconName = focused
+                                ? 'people'
+                                : 'people-outline';
                             break;
                         default:
                             break;
@@ -54,6 +59,7 @@ const Mytabs = () => {
             <Tab.Screen name="Love" component={LoveStackScreen} options={{ title: 'Yêu thích' }} />
             <Tab.Screen name="Home" component={HomeStackScreen} options={{ title: 'Trang chủ' }} />
             <Tab.Screen name="Login" component={LoginStackScreen} options={{ title: 'Đăng nhập' }} />
+            <Tab.Screen name="Detailuser" component={Detailuser} options={{ title: 'thông tin' }} />
         </Tab.Navigator>
     )
 };

@@ -21,8 +21,8 @@ const style = StyleSheet.create({
         borderWidth: 1,
         borderColor: "white",
         borderRadius: 10,
-        width: 50,
-        height: 50,
+        width: 25,
+        height: 25,
 
     },
     nameFood: {
@@ -34,7 +34,7 @@ const style = StyleSheet.create({
 
     },
     min: {
-        marginHorizontal: 40,
+        marginHorizontal: 30,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -51,6 +51,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold'
     },
     containerAbout: {
+
         marginHorizontal: 20,
 
 
@@ -60,7 +61,7 @@ const style = StyleSheet.create({
 
     },
     container: {
-
+        marginBottom: 10
     }
 
 })
