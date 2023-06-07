@@ -73,13 +73,13 @@ export default function Login(props) {
   return (
     <View style={styles.container}>
 
-      <ImageBackground source={require('../../assets/BG.jpg')} resizeMode="cover" style={styles.image}>
+      <ImageBackground source={require('../../assets/newBG.jpg')} resizeMode="cover" style={styles.image}>
 
         <View>
           <TextInput style={styles.userName} placeholder='nhập tên tài khoản' placeholderTextColor={'green'} onChangeText={(text) => setUserName(text)} value={userName} />
 
 
-          <TextInput style={styles.passWord} placeholder='nhập mật khẩu' placeholderTextColor={'green'} onChangeText={(text) => setpassWord(text)} value={passWord} />
+          <TextInput style={styles.passWord} secureTextEntry placeholder='nhập mật khẩu' placeholderTextColor={'green'} onChangeText={(text) => setpassWord(text)} value={passWord} />
         </View>
 
         <TouchableOpacity style={styles.btnDN} onPress={doLogin} >
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
   userName: {
     height: 50,
     width: 350,
+    paddingLeft: 10,
     backgroundColor: 'white',
     borderRadius: 5,
     marginTop: 170,
@@ -120,6 +121,7 @@ const styles = StyleSheet.create({
   passWord: {
     height: 50,
     width: 350,
+    paddingLeft: 10,
     backgroundColor: 'white',
     borderRadius: 5,
     marginTop: 20,
@@ -141,7 +143,7 @@ const styles = StyleSheet.create({
     color: '#eb7d34',
     fontWeight: 'bold',
     textDecorationLine: 'underline',
-
+    marginTop: 120
 
   },
   btnDK: {

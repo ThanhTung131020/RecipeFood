@@ -55,7 +55,7 @@ const Register = () => {
     //'192.168.1.6:3000/users/add?username=' + userName + '?password=' + passWord
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../../assets/BG.jpg')} resizeMode="cover" style={styles.image}>
+            <ImageBackground source={require('../../assets/newBG.jpg')} resizeMode="cover" style={styles.image}>
 
                 <View>
                     <TextInput style={styles.userName} placeholder='nhập tên tài khoản' placeholderTextColor={'green'} onChangeText={(text) => setUserName(text)} />
@@ -92,6 +92,8 @@ const styles = StyleSheet.create({
     userName: {
         height: 50,
         width: 350,
+        paddingLeft: 10,
+
         backgroundColor: 'white',
         borderRadius: 5,
         marginTop: 170,
@@ -102,6 +104,7 @@ const styles = StyleSheet.create({
         width: 350,
         backgroundColor: 'white',
         borderRadius: 5,
+        paddingLeft: 10,
         marginTop: 15,
     },
     btnDN: {

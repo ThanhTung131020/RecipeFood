@@ -39,11 +39,11 @@ const DetailUser = (props) => {
         Reload()
     }, []);
     const clearAllData = async () => {
-
+        setLoginInfor('')
         await AsyncStorage.removeItem('LoginInfor')
         await AsyncStorage.clear();
 
-        console.log(loginInfor);
+
         props.navigation.navigate('Login')
 
 
@@ -115,7 +115,7 @@ const DetailUser = (props) => {
     }
     return (
         <View>
-            <ImageBackground source={require('../assets/BG.jpg')} resizeMode="cover">
+            <ImageBackground source={require('../assets/newBG.jpg')} resizeMode="cover">
                 <View style={{ alignItems: 'center' }}>
 
 
@@ -123,10 +123,8 @@ const DetailUser = (props) => {
                     <ScrollView refreshControl={<RefreshControl refreshing={refreshing} onRefresh={() => onRefresh()} />} style={{ marginTop: 120 }}>
                         <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold' }} >ID : {loginInfor.id}</Text>
                         <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold', margin: 10 }} >tên tài khoản : {loginInfor.username}</Text>
-
-
-                        <TextInput placeholder='nhập mật khẩu mới' style={{ height: 50, width: 300, backgroundColor: 'white', borderRadius: 5, color: 'black', marginTop: 20 }} onChangeText={(text) => setPass(text)} value={pass}></TextInput>
-                        <TextInput placeholder='nhập lại mật khẩu mới' style={{ height: 50, width: 300, backgroundColor: 'white', borderRadius: 5, marginTop: 20, color: 'black' }} onChangeText={(text) => setrePass(text)} value={repass}></TextInput>
+                        <TextInput placeholder='nhập mật khẩu mới' style={{ height: 50, width: 300, backgroundColor: 'white', borderRadius: 5, color: 'black', marginTop: 20, paddingLeft: 10 }} onChangeText={(text) => setPass(text)} value={pass}></TextInput>
+                        <TextInput placeholder='nhập lại mật khẩu mới' style={{ height: 50, width: 300, backgroundColor: 'white', borderRadius: 5, marginTop: 20, color: 'black', paddingLeft: 10 }} onChangeText={(text) => setrePass(text)} value={repass}></TextInput>
                         <TouchableOpacity onPress={changPass} style={{ marginTop: 30, backgroundColor: '#eff218', alignItems: 'center', borderRadius: 5, padding: 5 }} >
                             <Text >đổi mật khẩu</Text>
                         </TouchableOpacity>

@@ -61,7 +61,7 @@ const style = StyleSheet.create({
 
     },
     container: {
-        marginBottom: 10
+
     }
 
 })

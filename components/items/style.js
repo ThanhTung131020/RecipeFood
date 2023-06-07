@@ -23,9 +23,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'thin',
         marginLeft: 10
-    },
-    viewNameFood: {
-
     }
+
 })
 export default styles;
